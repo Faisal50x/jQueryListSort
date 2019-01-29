@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="author" content="Faisal Ahmed" />
+	<meta name="keywords" content="jQuery,jQuery Sort,Filter,javaScript" />
+	<meta name="description" content="Free Web tutorials" />
+	<title>List and Sort</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- fontawesome cdn -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- bootstrap css cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous" />
+
+	<!-- bootstrap js cdn -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<nav class="navbar sticky-top navbar-light bg-dark">
+		<span>jQuery Sort</span>
+		<i data-feather="plus-circle"></i>
+
+	</nav>
+	<div class="card br-sq-top">
+		<div class="card-body">
+			<div class="form hide card">
+				<div class="form-group card-body">
+					<label for="name">Pet Name</label>
+					<input type="text" name="name" id="name" class="form-control" placeholder="Pet's name">
+					<label for="note">Note</label>
+					<textarea name="note" id="note" class="form-control" placeholder="Pet's name"></textarea>
+					<div class="row">
+						<div class="col">
+							<label for="owner">Owner</label>
+							<input type="text" name="owner" id="owner" class="form-control" placeholder="Pet's owner name">
+
+						</div>
+						<div class="col">
+							<label for="date">date</label>
+							<input type="date" name="date" id="date" class="form-control">
+
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary mt-10 btn-sm btn-block">Add</button>
+
+				</div>
+			</div>
+
+			<form class="form-inline search mt-10">
+				<div class="col-9 pd-none">
+					<input class="form-control br-sq-right" type="search" placeholder="Search" aria-label="Search">
+				</div>
+				<div class="col-3 pd-none">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle br-sq-left" type="button" id="dropdownMenu2" data-toggle="dropdown"
+						 aria-haspopup="true" aria-expanded="false">
+							Sort by:
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+							<button class="dropdown-item" type="button">Action</button>
+							<button class="dropdown-item" type="button">Another action</button>
+							<button class="dropdown-item" type="button">Something else here</button>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<div class="card mt-10">
+				<div class="card-header">
+					Pet's list
+				</div>
+				<div class="card-body">
+					<div class="petinfo">
+						<b class="">Pet name</b>
+						<h6 class="float-right">Date</h6>
+						<h6 href="#">Owner: Faisal Ahmed</h6>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					</div>
+					<div class="petinfo">
+						<b class="">Pet name</b>
+						<h6 class="float-right">Date</h6>
+						<h6 href="#">Owner: Faisal Ahmed</h6>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script>
+		feather.replace()
+	</script>
+</body>
+
+</html>
