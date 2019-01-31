@@ -7,4 +7,20 @@ $(() => {
     $('nav>svg').on('click', () => {
         $('.hide').toggle(1000);
     });
+    $.ajax({
+        url: "js/data.json",
+        crossDomain: true,
+        dataType: "jsonp"
+    }).done((data) => {
+        console.log(data);
+        $datalisting(data);
+    });
+    const $datalisting = info => {
+        $("#user-listing").loadTemplate('template.html', info, {
+            complete: () => {
+
+            }
+        });
+    }
+
 });
