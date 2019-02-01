@@ -16,6 +16,7 @@ $(() => {
         $datalisting(data);
     });
     const $datalisting = info => {
+        //info = _.sortBy();
         $("#user-listing").loadTemplate('template.html', info, {
             complete: () => {
 
