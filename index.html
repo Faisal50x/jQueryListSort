@@ -77,15 +77,17 @@
 				<div class="card-header">
 					Person's list
 					<div class="dropdown float-right">
-						<button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="sort" data-toggle="dropdown"
-						 aria-haspopup="true" aria-expanded="false">
+						<button class="btn btn-sm btn-secondary dropdown-toggle" id="sort" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
 							Sort by:
 						</button>
-						<div class="dropdown-menu" aria-labelledby="sort">
-							<button class="dropdown-item" type="button">ASC</button>
-							<button class="dropdown-item" type="button">DESC</button>
-							<button class="dropdown-item" type="button">Date</button>
-							<button class="dropdown-item" type="button">Name</button>
+						<div class="sort-menu dropdown-menu" aria-labelledby="sort">
+							<a class="sort-by dropdown-item" href="#" id="sort-name">Name</a>
+							<a class="sort-by dropdown-item active" href="#" id="sort-date">Date</a>
+							<a class="sort-by dropdown-item" href="#" id="sort-email">Email</a>
+							<div role="separator" class="dropdown-divider"></div>
+							<a class="sort-dir dropdown-item" href="#" id="sort-asc">Asc</a>
+							<a class="sort-dir dropdown-item active" href="#" id="sort-desc">Desc</a>
 						</div>
 					</div>
 				</div>
