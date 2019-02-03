@@ -8,16 +8,13 @@ $(() => {
         $('.hide').toggle(1000);
     });
     $.ajax({
-        url: "js/data.json",
-        crossDomain: true,
-        dataType: "jsonp"
-    }).done((data) => {
-        console.log(data);
+        url: "js/data.json"
+    }).done(function (data) {
         $datalisting(data);
     });
-    const $datalisting = info => {
+    const $datalisting = data => {
         //info = _.sortBy();
-        $("#user-listing").loadTemplate('template.html', info, {
+        $("#user-listing").loadTemplate('template.html', data, {
             complete: () => {
 
             }
