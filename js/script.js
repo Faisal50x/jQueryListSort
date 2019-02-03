@@ -55,4 +55,17 @@ $(() => {
         $datalisting(aptData);
     });
 
+    $('#searchData').keyup(function () {
+        let searchText = $(this).val();
+        aptData = _.filter(aptData, (i) => {
+            return (
+                i.name.toLowerCase().match(searchText.toLowerCase()) ||
+                i.email.toLowerCase().match(searchText.toLowerCase()) ||
+                i.designation.toLowerCase().match(searchText.toLowerCase())
+            );
+        });
+
+        $datalisting(aptData);
+    });
+
 });
