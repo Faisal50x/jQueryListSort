@@ -1,5 +1,5 @@
 $(() => {
-    let aptData, sortBy, sortDir;
+    let aptData, displayData, sortBy, sortDir;
     sortBy = 'date';
     sortDir = 'desc';
     $('.hide').hide();
@@ -9,8 +9,8 @@ $(() => {
     $.ajax({
         url: "js/data.json"
     }).done((data) => {
-        aptData = data;
-        $datalisting(aptData);
+        aptData = displayData = data;
+        $datalisting(displayData);
     });
     const $datalisting = data => {
         if (sortDir == 'asc') {
@@ -52,12 +52,12 @@ $(() => {
         }
 
         $(this).addClass('active');
-        $datalisting(aptData);
+        $datalisting(displayData);
     });
 
     $('#searchData').keyup(function () {
         let searchText = $(this).val();
-        aptData = _.filter(aptData, (i) => {
+        displayData = _.filter(aptData, (i) => {
             return (
                 i.name.toLowerCase().match(searchText.toLowerCase()) ||
                 i.email.toLowerCase().match(searchText.toLowerCase()) ||
@@ -65,7 +65,7 @@ $(() => {
             );
         });
 
-        $datalisting(aptData);
+        $datalisting(displayData);
     });
 
 });
